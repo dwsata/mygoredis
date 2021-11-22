@@ -9,24 +9,24 @@ import (
 
 const NeverDie = 0 //ttl = 0
 type value struct {
-	data  []byte //storage real data
-	ttl   int64  //time to live
-	ctime int64  //create time
+	Data  []byte //storage real data
+	Ttl   int64  //time to live
+	Ctime int64  //create time
 }
 
 func newValue(data []byte, ttl int64) *value {
 	return &value{
-		data:  helpers.Copy(data),
-		ttl:   ttl,
-		ctime: time.Now().Unix(),
+		Data:  helpers.Copy(data),
+		Ttl:   ttl,
+		Ctime: time.Now().Unix(),
 	}
 }
 
 func (v *value) alive() bool {
-	return v.ttl == NeverDie || time.Now().Unix()-v.ctime < v.ttl
+	return v.Ttl == NeverDie || time.Now().Unix()-v.Ctime < v.Ttl
 }
 
 func (v *value) visit() []byte {
-	atomic.SwapInt64(&v.ctime, time.Now().Unix())
-	return v.data
+	atomic.SwapInt64(&v.Ctime, time.Now().Unix())
+	return v.Data
 }
