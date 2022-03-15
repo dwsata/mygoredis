@@ -4,7 +4,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/opentechnologysel/mygoredis/helpers"
+	"github.com/opentechnologyself/mygoredis/helpers"
 )
 
 const NeverDie = 0 //ttl = 0

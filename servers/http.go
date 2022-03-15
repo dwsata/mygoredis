@@ -8,7 +8,7 @@ import (
 	"strconv"
 
 	"github.com/julienschmidt/httprouter"
-	"github.com/opentechnologysel/mygoredis/caches"
+	"github.com/opentechnologyself/mygoredis/caches"
 )
 
 type HttpServer struct {
