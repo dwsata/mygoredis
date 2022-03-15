@@ -1,4 +1,4 @@
-module github.com/opentechnologysel/mygoredis
+module github.com/opentechnologyself/mygoredis
 
 go 1.17
 
