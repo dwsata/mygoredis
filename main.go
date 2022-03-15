@@ -4,8 +4,8 @@ import (
 	"flag"
 	"log"
 
-	"github.com/opentechnologysel/mygoredis/caches"
-	"github.com/opentechnologysel/mygoredis/servers"
+	"github.com/opentechnologyself/mygoredis/caches"
+	"github.com/opentechnologyself/mygoredis/servers"
 )
 
 func main() {
